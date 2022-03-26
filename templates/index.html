@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HW2</title>
+    <link href="../static/log_sty.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <nav>
+            {%if username is defined %}
+            <div class="loggedin">
+                <p role="presentation"> Hello &nbsp;{{username}},</p>
+                <a href="/logout">Logout</a>
+            </div>
+            
+            {% else %}
+            <div class="nav">
+                <h1>Welcome</h1>
+                <p role="presentation" class="active"><a href="#">Home</a>
+                </p>
+                <p role="presentation"><a href="/signin">Sign In</a>
+                </p>
+                <p role="presentation"><a href="/signup">Sign Up</a>
+                </p>
+                
+            </div>
+           
+            {% endif %}
+        </nav>
+        
+        
+    </div>
+</div>
+</body>
+
+</html>

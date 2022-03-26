@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HW2</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="../static/log_sty.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header">
+        <nav>
+            <div class="nav">
+                <p role="presentation" ><a href="main">Home</a></p>
+                <p role="presentation" class="active"><a href="#">Sign In</a></p>
+                <p role="presentation"><a href="/signup">Sign Up</a></p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Login</h1>
+        
+        <form class="form-signin" action="/signin" method="post">
+            <p>
+                <input type="name" name="username" id="inputName" class="form-control" placeholder="Username" required autofocus>
+            </p>
+            <p>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            </p>
+            <button id="btnSignUp" class="form-btn" onclick = 'this.form.submit();' type="button">Login</button>
+        </form>
+        <div id="register_account">
+            <ul>Don't have account? <a href="http://127.0.0.1:5000/signup">Register</a></ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
