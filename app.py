@@ -10,7 +10,7 @@ app.config['MONGO_URI'] = 'mongodb://localhost:27017/users'
 mongo = PyMongo(app)
 
 @app.route("/")
-@app.route("/main")
+@app.route("/profile")
 def main():
     return render_template('index.html')
 
@@ -24,7 +24,7 @@ def signup():
         if signup == signup_user:
             flash(request.form['username'] + ' username is already exist')
             return redirect(url_for('signup'))
-            
+
         users.insert_one({'username': request.form['username'], 'password': request.form['password'], 'email': request.form['email']})
         return redirect(url_for('signin'))
 
